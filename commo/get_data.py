@@ -73,3 +73,8 @@ class GetData:
         else:
             return exp
 
+
+    def weite_result(self, hang, value):
+        lie = constant_var.result()
+        self.op_excel.wite_value(hang, lie, value)
+

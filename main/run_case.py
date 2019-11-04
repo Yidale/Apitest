@@ -27,13 +27,16 @@ class RunCase:
             expect = self.data.get_expect(i)
             if is_run:
                 res = self.run_method.run_main(method, url, data, header)
-                print(type(res))
+                # print(type(res))
                 if self.compare.is_contain(expect, res):
+                    self.data.weite_result(i, "测试成功")
                     print("测试通过")
+
                 else:
+                    self.data.weite_result(i, "测试失败")
                     print("测试失败")
                 # return res
-                pprint(res)
+                # pprint(res)
 
 
 
